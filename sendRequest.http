@@ -1,0 +1,39 @@
+
+
+GET http://localhost:9000/payment?botId=5e69fe8f145c2f001756a177
+###
+
+DELETE http://localhost:9000/client/5e861ea26c6e770017fb731d
+
+###
+POST http://localhost:9000/payment
+
+{
+    "reference": "Voke Olomu",
+    "message": "superadmin",
+    "name": "password1",
+    "email": "vokeolomu5@email.com",
+    "amount": "090928888833",
+   
+}
+
+###
+POST http://localhost:9000/client HTTP/1.1
+content-type: application/json
+
+{
+    "fullName": "Voke Olomu",
+    "role": "superadmin",
+    "password": "password1",
+    "email": "volomu@ithorizonsng.com",
+    "phone": "090928888833",
+    "isVerified": true,
+    "isCreated": false,
+    "isEnabled": true,
+    "isAdmin": true,
+    "companyId": null
+}
+###
+
+GET http://localhost:9000/client HTTP/1.1
+content-type: application/json
