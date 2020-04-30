@@ -37,7 +37,6 @@ export class ClientController {
         to: 'whatsapp:+2348164637381'
       })
       .then(message => console.log(message.sid));
-    console.log('server started')
     return this.clientService.findAll();
   }
   @Post()
