@@ -49,7 +49,7 @@ export class ClientController {
       client.messages
         .create({
           from: 'whatsapp:+14155238886',
-          body: 'welcome to ith bot',
+          body: 'welcome to ITH Bot. how may I be of help?',
           to: clientResponse.From,
         })
         .then(message => console.log(message.sid));
