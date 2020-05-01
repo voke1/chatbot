@@ -62,7 +62,6 @@ export class ClientController {
           to: clientResponse.From,
         })
         .then(message => console.log(message.sid));
-      console.log("clientResonse is:", clientResponse)
 
     }
 
@@ -94,10 +93,6 @@ export class ClientController {
     return this.clientService.update(id, updateClientDto, companyId);
   }
 
-  // @Put(':id')
-  // findAndUpdate(@Param('id') @Query('companyId') id): Promise<Client> {
-  //   return this.clientService.findAndUpdate(id);
-  // }
 
   @Post()
   async signUp(
