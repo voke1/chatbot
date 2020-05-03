@@ -18,7 +18,6 @@ import { Client } from './interfaces/client.interface';
 
 import { Response, Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
-// @Controller('client')
 
 @Controller('client')
 export class ClientController {
