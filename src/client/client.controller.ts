@@ -32,7 +32,7 @@ export class ClientController {
     client.messages
       .create({
         from: 'whatsapp:+14155238886',
-        body: 'Hello there!',
+        body: 'Hello',
         to: 'whatsapp:+2348164637381'
       })
       .then(message => console.log(message.sid));
