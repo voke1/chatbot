@@ -15,7 +15,6 @@ import {
 import { CreateClientDto } from './dto/create-client.dto';
 import { ClientsService } from './client.service';
 import { Client } from './interfaces/client.interface';
-
 import { Response, Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 
@@ -32,7 +31,7 @@ export class ClientController {
     client.messages
       .create({
         from: 'whatsapp:+14155238886',
-        body: 'Hello there!',
+        body: 'Hello ther',
         to: 'whatsapp:+2348164637381'
       })
       .then(message => console.log(message.sid));
