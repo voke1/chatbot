@@ -18,6 +18,9 @@ import { Client } from './interfaces/client.interface';
 import { Response, Request } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 
+
+// Using twilio for whatsapp chatbot
+
 @Controller('client')
 export class ClientController {
   constructor(private readonly clientService: ClientsService) { }
