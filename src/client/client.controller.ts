@@ -104,13 +104,6 @@ export class ClientController {
     return this.clientService.signUp(createClientDto, res, req);
   }
 
-  @Get('test')
-  @UseGuards(AuthGuard('jwt'))
-  testAuthRoute() {
-    return {
-      message: 'you did it',
-    };
-  }
 
   @Patch(':id')
   findByIdAndToggleEnable(@Param('id') id): Promise<Client> {
