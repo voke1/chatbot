@@ -9,14 +9,11 @@ import {
   Req,
   Res,
   Param,
-  UseGuards,
   Query,
 } from '@nestjs/common';
-import { CreateClientDto } from './dto/create-client.dto';
 import { ClientsService } from './client.service';
 import { Client } from './interfaces/client.interface';
 import { Response, Request } from 'express';
-import { AuthGuard } from '@nestjs/passport';
 
 
 // Using twilio for whatsapp chatbot
@@ -40,6 +37,7 @@ export class ClientController {
       .then(message => console.log(message.sid));
     return this.clientService.findAll();
   }
+
   @Post()
   getResponse(@Body() clientResponse){
     const accountSid = 'AC40c20fd2dfcd0759d663e6bfa2b7aff4';
