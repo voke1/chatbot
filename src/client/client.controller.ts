@@ -86,13 +86,6 @@ export class ClientController {
     return this.clientService.delete(id);
   }
 
-  @Put(':id')
-  update(@Body() updateClientDto, @Param('id') id, @Query('companyId') companyId): Promise<Client> {
-    console.log('companyId', companyId, id)
-    return this.clientService.update(id, updateClientDto, companyId);
-  }
-
-
   @Post()
   async signUp(
     @Body() createClientDto,
