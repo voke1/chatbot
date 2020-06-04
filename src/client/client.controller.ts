@@ -82,14 +82,14 @@ export class ClientController {
     return this.clientService.delete(id);
   }
 
-  @Post()
-  async signUp(
-    @Body() createClientDto,
-    @Req() res: Response,
-    @Res() req: Request,
-  ): Promise<Client> {
-    return this.clientService.signUp(createClientDto, res, req);
-  }
+  // @Post()
+  // async signUp(
+  //   @Body() createClientDto,
+  //   @Req() res: Response,
+  //   @Res() req: Request,
+  // ): Promise<Client> {
+  //   return this.clientService.signUp(createClientDto, res, req);
+  // }
 
 
   @Patch(':id')
